@@ -8,6 +8,7 @@
 * Steps
 * Dataset
 * Hyper-parameter search
+* Stump tree의 갯수에 따른 성능 변화
 * Result
 
 ### :pushpin: Background 
