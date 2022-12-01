@@ -9,7 +9,6 @@
 * Dataset
 * Hyper-parameter search
 * Result
-* Analysis
 
 ### :pushpin: Background 
 -----------------------------
@@ -68,7 +67,9 @@ AdaBoost는 각 트리별 중요도에 있어 차이가 난다는 특징이 있�
 <p align="center">
     <img src="./imgs/ensemble/img0.png" width = "50%" height = "50%">
 </p>
+해당 결과에서 1은 모두 잘 분류가 되었지만, 일부 0라벨에 해당되는 데이터는 잘 분리되지 못한 모습을 확인할 수 있었습니다.
 
+* Email Spam Classification
 <p align="center">
     <img src="./imgs/ensemble/img1.png" width = "50%" height = "50%">
 </p>
@@ -77,10 +78,12 @@ AdaBoost는 각 트리별 중요도에 있어 차이가 난다는 특징이 있�
 <p align="center">
     <img src="./imgs/ensemble/img2.png" width = "50%" height = "50%">
 </p>
+n_estimator가 100인 경우를 제외한 3가지 경우 learning rate가 증가함에 따라 성능 향상이 있음을 확인할 수 있었습니다. 추가적으로 n_estimator가 256인 경우 가장 성능 변화폭이 두드러짐을 확인할 수 있었습니다. learning_rate를 줄인다면 가중치 갱신의 변동폭이 감소해서 여러 학습기들의 decision boundary 차이가 줄어들며 성능이 하락한다고 추가적인 해석을 해볼 수 있습니다.
 
 <p align="center">
     <img src="./imgs/ensemble/img3.png" width = "50%" height = "50%">
 </p>
+learning_rate가 0.5인 경우 n_estimator가 증가함에 따라 성능 향상이 있음을 확인할 수 있었습니다. 이와는 반대로 다른 경우에는 중간 n_estimator에 해당될 떄 성능이 가장 높은 모습을 확인할 수 있었습니다. n_estimators를 늘린다면 생성하는 weak learner의 수 증가하고, 복잡한 decision boundary를 생성하게 되며 모델이 복잡해진다는 점을 고려해보면 위와 같은 성능 변화 결과의 해석이 가능합니다.
 
 * Stump tree의 갯수에 따른 성능 변화
 
@@ -88,10 +91,18 @@ AdaBoost는 각 트리별 중요도에 있어 차이가 난다는 특징이 있�
 |:--:|:--:|:--:|:--:|:--:|:--:|
 |**Accuracy**|0.895|0.959|0.971|0.982|0.977|
 
+### **🌲 AdaBoost의 장단점**
+------
 
-### 📊 Analysis
-------------------------------
-
+- **장점**
+    * overfitting에 비교적 덜 취약함
+    * bias와 variance를 줄이는데 도움을 줌
+    * 해당 방법론을 통해 weak classifier의 accuracy가 향상될 수 있음
+    * 사용이 비교적 쉬움
+- **단점**
+    * 양질의 데이터셋이 필요함
+    * outlier와 noise에 민감함
+    * XGBoost보다 느린 속도
 
 ### 📂 References
 ------------------------------
