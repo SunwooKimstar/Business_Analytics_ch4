@@ -66,23 +66,24 @@ AdaBoost는 각 트리별 중요도에 있어 차이가 난다는 특징이 있�
 -----------------------------
 * make_classification
 <p align="center">
-    <img src="./imgs/ensemble/img0.jpg" width = "50%" height = "50%">
+    <img src="./imgs/ensemble/img0.png" width = "50%" height = "50%">
 </p>
 
 <p align="center">
-    <img src="./imgs/ensemble/img1.jpg" width = "50%" height = "50%">
+    <img src="./imgs/ensemble/img1.png" width = "50%" height = "50%">
 </p>
 
 * Hyper-parameter search
 <p align="center">
-    <img src="./imgs/ensemble/img2.jpg" width = "50%" height = "50%">
+    <img src="./imgs/ensemble/img2.png" width = "50%" height = "50%">
 </p>
 
 <p align="center">
-    <img src="./imgs/ensemble/img3.jpg" width = "50%" height = "50%">
+    <img src="./imgs/ensemble/img3.png" width = "50%" height = "50%">
 </p>
 
 * Stump tree의 갯수에 따른 성능 변화
+
 |**Stump**|1|5|10|100|1000|
 |:--:|:--:|:--:|:--:|:--:|:--:|
 |**Accuracy**|0.895|0.959|0.971|0.982|0.977|
